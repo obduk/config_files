@@ -1,0 +1,7 @@
+[user]
+  name = Owen Davies
+  email = git@obduk.com
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore

@@ -1,0 +1,6 @@
+*.swp
+/.bundle
+/log/
+/tmp/
+/vendor/bundle
+/webrat.log
