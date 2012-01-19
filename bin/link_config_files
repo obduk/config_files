@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-ln -sf $HOME/workspace/config_files/vimrc $HOME/.vimrc
 ln -sf $HOME/workspace/config_files/gitconfig $HOME/.gitconfig
 ln -sf $HOME/workspace/config_files/gitignore $HOME/.gitignore
+ln -sf $HOME/workspace/config_files/rdebugrc $HOME/.rdebugrc
+ln -sf $HOME/workspace/config_files/vimrc $HOME/.vimrc
 
