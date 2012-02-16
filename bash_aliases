@@ -1,9 +1,12 @@
 # ~/.bash_aliases
+alias a='git add -A'
 alias b='bundle exec'
 alias bi='bundle install'
 alias c='bundle exec rails console'
 alias d='bundle exec cap deploy'
 alias la='ls -AlF'
 alias ll='ls -lF'
+alias p='git push'
 alias r='bundle exec rake'
 alias s='bundle exec rails server'
+alias w='workspace-status'
