@@ -2,7 +2,7 @@
 alias a='git add -A && git commit'
 alias b='bundle exec'
 alias c='bundle exec rails console'
-alias d='bundle exec cap deploy'
+alias d='git diff'
 alias g='git status'
 alias i='bundle install'
 alias j='jobs'
