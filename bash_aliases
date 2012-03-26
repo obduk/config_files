@@ -1,5 +1,5 @@
 # ~/.bash_aliases
-alias a='git add -A && git commit'
+alias a='git add -A && git commit && git push'
 alias b='bundle exec'
 alias c='bundle exec rails console'
 alias d='git diff'
