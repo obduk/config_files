@@ -1,6 +1,7 @@
 set laststatus=2
 set number
 set hlsearch
+set incsearch
 
 filetype plugin indent on
 
