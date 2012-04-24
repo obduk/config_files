@@ -5,3 +5,14 @@
   ui = auto
 [core]
   excludesfile = ~/.gitignore
+[alias]
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  g = grep
+  h = checkout
+  l = stash list
+  m = merge
+  p = pull
+  s = status
