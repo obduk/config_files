@@ -1,7 +1,10 @@
 set laststatus=2
 set number
+
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 
 filetype plugin indent on
 
