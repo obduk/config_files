@@ -13,7 +13,6 @@ set expandtab
 set shiftwidth=2
 
 set list
-set listchars=tab:>-,trail:.
+set listchars=tab:▸\ ,trail:·
 
-set spell spelllang=en_gb
-
+autocmd BufRead,BufNewFile *.md,*.mdown,*.txt setlocal spell spelllang=en_gb
