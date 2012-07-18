@@ -4,9 +4,8 @@ set -e
 filename=`readlink -f $0`
 config_files=`dirname $filename | sed 's,/*[^/]\+/*$,,'`
 
-ln -sf $config_files/bash_aliases $HOME/.bash_aliases
-ln -sf $config_files/gitconfig $HOME/.gitconfig
-ln -sf $config_files/gitignore $HOME/.gitignore
-ln -sf $config_files/rdebugrc $HOME/.rdebugrc
-ln -sf $config_files/vimrc $HOME/.vimrc
+for file in `ls $config_files/files`
+do
+  ln -sf $config_files/files/$file $HOME/.$file
+done
 
