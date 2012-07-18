@@ -1,9 +1,12 @@
 #!/bin/bash
 set -e
 
-ln -sf $HOME/workspace/config_files/bash_aliases $HOME/.bash_aliases
-ln -sf $HOME/workspace/config_files/gitconfig $HOME/.gitconfig
-ln -sf $HOME/workspace/config_files/gitignore $HOME/.gitignore
-ln -sf $HOME/workspace/config_files/rdebugrc $HOME/.rdebugrc
-ln -sf $HOME/workspace/config_files/vimrc $HOME/.vimrc
+filename=`readlink -f $0`
+config_files=`dirname $filename | sed 's,/*[^/]\+/*$,,'`
+
+ln -sf $config_files/bash_aliases $HOME/.bash_aliases
+ln -sf $config_files/gitconfig $HOME/.gitconfig
+ln -sf $config_files/gitignore $HOME/.gitignore
+ln -sf $config_files/rdebugrc $HOME/.rdebugrc
+ln -sf $config_files/vimrc $HOME/.vimrc
 
