@@ -16,3 +16,4 @@
   m = merge
   p = pull
   s = status
+  workspace = ! /home/owen/workspace/git_workspace/bin/git_workspace /home/owen/workspace
