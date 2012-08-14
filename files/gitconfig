@@ -6,12 +6,5 @@
 [core]
   excludesfile = ~/.gitignore
 [alias]
-  a = add
-  b = branch
-  c = commit
-  d = diff
-  f = fetch
-  g = grep
-  p = pull
-  s = ! git branch && git status -s && git stash list
+  info = ! git branch && git status -s && git stash list
   workspace = ! /home/owen/workspace/git_workspace/bin/git_workspace /home/owen/workspace
