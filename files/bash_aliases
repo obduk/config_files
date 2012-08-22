@@ -38,4 +38,5 @@ alias bi='bundle install'
 alias r='bundle exec rake'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server'
-alias t='bundle exec rake test'
+alias rt='bundle exec rake test'
+
