@@ -28,9 +28,11 @@ alias gst='git status'
 
 # git workspace
 alias w='git workspace'
+alias wb='git workspace branch'
 alias wf='git workspace fetch'
 alias wi='git workspace info'
 alias wl='git workspace pull'
+alias wr='git workspace branch -r'
 alias ws='git workspace status'
 
 # ruby
