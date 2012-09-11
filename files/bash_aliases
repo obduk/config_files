@@ -23,6 +23,7 @@ alias gg='git grep'
 alias gi='git info'
 alias gl='git pull'
 alias gp='git push'
+alias gr='git branch -r'
 alias gs='git status'
 alias gst='git status'
 
