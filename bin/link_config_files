@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-filename=`readlink -f $0`
-config_files=`dirname $filename | sed 's,/*[^/]\+/*$,,'`
+config_files=$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" && pwd )
 
 for file in `ls $config_files/files`
 do
