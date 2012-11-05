@@ -1,5 +1,7 @@
 *.swp
 *.log
 /.bundle
+/coverage
+/public/coverage
 /tmp/
 /vendor/bundle
