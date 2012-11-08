@@ -8,7 +8,7 @@ alias ll='ls -lh'
 alias l='ll'
 alias m='man'
 alias n='sudo netstat -ntlp'
-alias u='sudo aptitude safe-upgrade'
+alias u='sudo aptitude update && sudo aptitude safe-upgrade'
 alias v='vim'
 
 # git
