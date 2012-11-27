@@ -1,12 +1,10 @@
 # ~/.bash_aliases
-alias ..='cd ..'
 alias f='fg'
 alias h='history'
 alias j='jobs'
 alias la='ls -lhA'
 alias ll='ls -lh'
 alias l='ll'
-alias m='man'
 alias n='sudo netstat -ntlp'
 alias u='sudo aptitude update && sudo aptitude safe-upgrade'
 alias v='vim'
@@ -45,4 +43,7 @@ alias r='bundle exec rake'
 alias rc='bundle exec rails console'
 alias rs='bundle exec rails server'
 alias rt='bundle exec rake test'
+
+alias x='xvfb-run'
+alias xr='xvfb-run bundle exec rake'
 
