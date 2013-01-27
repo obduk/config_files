@@ -3,8 +3,6 @@
   email = git@obduk.com
 [color]
   ui = auto
-[core]
-  excludesfile = ~/.gitignore
 [push]
   default = tracking
 [alias]
