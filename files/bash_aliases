@@ -43,7 +43,4 @@ alias r='bundle exec rake'
 alias rc='bundle exec rails console'
 alias rr='bundle exec rails runner'
 alias rs='bundle exec rails server'
-alias t='COVERAGE=on xvfb-run bundle exec rspec'
-
-alias x='xvfb-run'
 
