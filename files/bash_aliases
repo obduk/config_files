@@ -41,6 +41,4 @@ alias b='bundle exec'
 alias bi='bundle install'
 alias r='bundle exec rake'
 alias rc='bundle exec rails console'
-alias rr='bundle exec rails runner'
-alias rs='bundle exec rails server'
 
