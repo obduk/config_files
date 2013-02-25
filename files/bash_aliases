@@ -8,6 +8,7 @@ alias l='ll'
 alias n='sudo netstat -ntlp'
 alias u='sudo aptitude update && sudo aptitude safe-upgrade'
 alias v='vim'
+alias s='python -m SimpleHTTPServer'
 
 # git
 alias g='git'
@@ -41,4 +42,3 @@ alias b='bundle exec'
 alias bi='bundle install'
 alias r='bundle exec rake'
 alias rc='bundle exec rails console'
-
