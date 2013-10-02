@@ -33,6 +33,7 @@ alias wb='git workspace branch'
 alias wf='git workspace fetch'
 alias wi='git workspace info'
 alias wl='git workspace pull'
+alias wp='git workspace push'
 alias wr='git workspace branch -r'
 alias ws='git workspace status'
 
