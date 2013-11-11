@@ -1,2 +1,2 @@
-files/ssh/*
-!files/ssh/rc
+/files/ssh/*
+!/files/ssh/rc
