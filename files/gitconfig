@@ -7,4 +7,6 @@
   default = tracking
 [alias]
   info = ! git branch && git status -s && git stash list
-  workspace = ! /home/owen/workspace/git_workspace/bin/git_workspace /home/owen/workspace
+  workspace = ! ~/workspace/git_workspace/bin/git_workspace ~/workspace
+[core]
+  excludesfile = ~/.gitignore
