@@ -17,4 +17,4 @@ set colorcolumn=80
 set list
 set listchars=tab:▸\ ,trail:·
 
-autocmd BufRead,BufNewFile *.md,*.mdown,*.txt setlocal spell spelllang=en_gb
+autocmd BufRead,BufNewFile *.md,*.mdown,*.txt,COMMIT_EDITMSG setlocal spell spelllang=en_gb
