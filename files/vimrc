@@ -8,6 +8,8 @@ set smartcase
 
 filetype plugin indent on
 
+set nowrap
+
 set tabstop=2
 set expandtab
 set shiftwidth=2
