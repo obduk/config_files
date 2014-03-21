@@ -7,3 +7,6 @@
 [submodule "files/vim/bundle/vim-clojure-static"]
 	path = files/vim/bundle/vim-clojure-static
 	url = git://github.com/guns/vim-clojure-static.git
+[submodule "files/vim/bundle/ctrlp.vim"]
+	path = files/vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
