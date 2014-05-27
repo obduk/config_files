@@ -13,3 +13,15 @@
 [submodule "files/vim/bundle/tabular"]
 	path = files/vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "files/vim/bundle/vim-leiningen"]
+	path = files/vim/bundle/vim-leiningen
+	url = git://github.com/tpope/vim-leiningen.git
+[submodule "files/vim/bundle/vim-projectionist"]
+	path = files/vim/bundle/vim-projectionist
+	url = git://github.com/tpope/vim-projectionist.git
+[submodule "files/vim/bundle/vim-dispatch"]
+	path = files/vim/bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
+[submodule "files/vim/bundle/vim-fireplace"]
+	path = files/vim/bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
