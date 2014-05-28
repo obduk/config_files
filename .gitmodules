@@ -27,10 +27,10 @@
 	url = git://github.com/tpope/vim-fireplace.git
 [submodule "files/vim/bundle/nerdtree"]
 	path = files/vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = git://github.com/scrooloose/nerdtree.git
 [submodule "files/vim/bundle/vim-fugitive"]
 	path = files/vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "files/vim/bundle/vim-golang"]
 	path = files/vim/bundle/vim-golang
-	url = git@github.com:jnwhiteh/vim-golang.git
+	url = git://github.com/jnwhiteh/vim-golang.git
