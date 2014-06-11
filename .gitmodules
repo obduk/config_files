@@ -40,3 +40,6 @@
 [submodule "files/vim/bundle/vim-rails"]
 	path = files/vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "files/vim/bundle/gundo"]
+	path = files/vim/bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
