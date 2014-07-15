@@ -8,6 +8,6 @@ git submodule update
 
 for file in `ls files`
 do
-  ln -sfn `pwd`/files/$file $HOME/.$file
+  ln -sfn `pwd`/files/$file ~/.$file
 done
 
