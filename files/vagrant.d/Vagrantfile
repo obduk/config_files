@@ -1,0 +1,8 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.synced_folder '/Users/owen/workspace/config_files', '/home/vagrant/.config_files', nfs: true
+
+  config.vm.provision 'shell', privileged: false, inline: './.config_files/bin/bootstrap'
+end
