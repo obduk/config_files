@@ -8,14 +8,15 @@ git submodule update
 
 for file in `ls files`
 do
-  ln -sfn `pwd`/files/$file ~/.$file
+  if [ -f files/$file ]
+  then
+    ln -sfn `pwd`/files/$file ~/.$file
+  else
+    mkdir -p ~/.$file
+
+    for dir_file in `ls files/$file`
+    do
+      ln -sfn `pwd`/files/$file/$dir_file ~/.$file/$dir_file
+    done
+  fi
 done
-
-cat > ~/.ssh/rc << EOF
-#!/bin/bash
-
-if test \$SSH_AUTH_SOCK
-then
-  ln -sf \$SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
-fi
-EOF
