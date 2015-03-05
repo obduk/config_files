@@ -7,6 +7,6 @@
   default = current
 [alias]
   info = ! git branch && git status -s && git stash list
-  workspace = ! ~/workspace/git_workspace/bin/git_workspace ~/workspace
+  workspace = ! ~/.git_workspace ~/workspace
 [core]
   excludesfile = ~/.gitignore
