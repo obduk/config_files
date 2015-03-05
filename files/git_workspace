@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+workspace=$1
+shift
+
+if [ ! -d $workspace ]
+then
+  echo "Could not find workspace: $workspace" >&2
+  exit 1
+fi
+
+for repository in `ls $workspace`
+do
+  folder=$workspace/$repository
+
+  if [ -d $folder/.git ]
+  then
+    echo $repository
+    (cd $folder && git $@ || true)
+    echo
+  fi
+done
+
