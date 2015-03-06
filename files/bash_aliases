@@ -35,3 +35,7 @@ alias wp='git workspace push'
 alias wr='git workspace branch --remotes'
 alias ws='git workspace status'
 
+# vagrant
+alias vh='vagrant halt'
+alias vp='vagrant provision'
+alias vu='vagrant up'
