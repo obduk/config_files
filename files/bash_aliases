@@ -36,7 +36,8 @@ alias wr='git workspace branch --remotes'
 alias ws='git workspace status'
 
 # vagrant
+alias vd='vagrant destroy'
 alias vh='vagrant halt'
 alias vp='vagrant provision'
-alias vu='vagrant up'
 alias vs='vagrant ssh -c "tmux a || tmux"'
+alias vu='vagrant up'
