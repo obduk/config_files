@@ -2,9 +2,9 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder '/Users/owen/workspace/config_files', '/home/vagrant/.config_files', nfs: true
 
   config.vm.provision 'shell', inline: <<-SHELL
-    apt-get install --yes git htop ncdu
+    apt-get install --yes git htop ncdu vim-nox
 
-    update-alternatives --set editor /usr/bin/vim.tiny
+    update-alternatives --set editor /usr/bin/vim.nox
   SHELL
 
   config.vm.provision 'shell', privileged: false, inline: './.config_files/bin/bootstrap'
