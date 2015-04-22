@@ -1,36 +1,36 @@
 [submodule "files/vim/bundle/vim-sensible"]
 	path = files/vim/bundle/vim-sensible
-	url = git://github.com/tpope/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible.git
 [submodule "files/vim/bundle/vim-puppet"]
 	path = files/vim/bundle/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
+	url = https://github.com/rodjek/vim-puppet.git
 [submodule "files/vim/bundle/ctrlp.vim"]
 	path = files/vim/bundle/ctrlp.vim
-	url = git://github.com/kien/ctrlp.vim.git
+	url = https://github.com/kien/ctrlp.vim.git
 [submodule "files/vim/bundle/tabular"]
 	path = files/vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule "files/vim/bundle/vim-projectionist"]
 	path = files/vim/bundle/vim-projectionist
-	url = git://github.com/tpope/vim-projectionist.git
+	url = https://github.com/tpope/vim-projectionist.git
 [submodule "files/vim/bundle/nerdtree"]
 	path = files/vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "files/vim/bundle/vim-fugitive"]
 	path = files/vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "files/vim/bundle/tcomment_vim"]
 	path = files/vim/bundle/tcomment_vim
-	url = git://github.com/tomtom/tcomment_vim.git
+	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "files/vim/bundle/vim-rails"]
 	path = files/vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
+	url = https://github.com/tpope/vim-rails.git
 [submodule "files/vim/bundle/gundo"]
 	path = files/vim/bundle/gundo
-	url = git://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 [submodule "files/vim/bundle/html5"]
 	path = files/vim/bundle/html5
-	url = git://github.com/othree/html5.vim.git
+	url = https://github.com/othree/html5.vim.git
 [submodule "files/vim/bundle/vim-coffee-script"]
 	path = files/vim/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
