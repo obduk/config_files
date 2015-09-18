@@ -36,6 +36,7 @@ alias ws='git workspace status'
 
 # vagrant
 alias vd='vagrant destroy'
+alias vg='vagrant global-status'
 alias vh='vagrant halt'
 alias vp='vagrant provision'
 alias vr='vagrant reload'
