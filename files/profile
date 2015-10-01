@@ -9,5 +9,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
   PATH="$HOME/bin:$PATH"
 fi
-
-PROMPT_COMMAND='echo -ne "\033]0; ${PWD##*/}\007"'
