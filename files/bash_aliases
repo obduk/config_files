@@ -1,16 +1,13 @@
 # ~/.bash_aliases
-alias f='fg'
 alias h='history'
 alias j='jobs'
 alias la='ls -lhAF'
 alias ll='ls -lhF'
-alias l='ll'
 alias n='sudo netstat -ntlp'
-alias v='vim'
 alias s='python -m SimpleHTTPServer'
 
 # git
-alias ga='git add --all && git commit && git push'
+alias ga='git add --all'
 alias gb='git branch'
 alias gc='git commit'
 alias gd='git diff'
@@ -21,18 +18,16 @@ alias gi='git info'
 alias gl='git pull'
 alias glr='git pull --rebase'
 alias gp='git push'
+alias gpf='git push --force'
 alias gr='git branch --remotes'
 alias gs='git status'
 
 # git workspace
 alias gw='git workspace'
-alias wb='git workspace branch'
 alias wf='git workspace fetch'
 alias wi='git workspace info'
 alias wl='git workspace pull'
-alias wp='git workspace push'
 alias wr='git workspace branch --remotes'
-alias ws='git workspace status'
 
 # vagrant
 alias vd='vagrant destroy'
