@@ -8,4 +8,4 @@
 [alias]
   info = ! git branch && git status -s && git stash list
 [core]
-  excludesfile = $HOME/.gitignore
+  excludesfile = ~/.gitignore
