@@ -23,11 +23,11 @@ alias gr='git branch --remotes'
 alias gs='git status'
 
 # git workspace
-alias gw='git workspace'
-alias wf='git workspace fetch'
-alias wi='git workspace info'
-alias wl='git workspace pull'
-alias wr='git workspace branch --remotes'
+alias gw="$HOME/.git_workspace"
+alias wf="$HOME/.git_workspace fetch"
+alias wi="$HOME/.git_workspace info"
+alias wl="$HOME/.git_workspace pull"
+alias wr="$HOME/.git_workspace branch --remotes"
 
 # vagrant
 alias vd='vagrant destroy'

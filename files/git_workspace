@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-workspace=$1
-shift
+workspace=$HOME/workspace
 
 if [ ! -d $workspace ]
 then
@@ -17,7 +16,8 @@ do
   if [ -d $folder/.git ]
   then
     echo $repository
-    (cd $folder && git $@ || true)
+    cd $folder
+    git $@
     echo
   fi
 done
