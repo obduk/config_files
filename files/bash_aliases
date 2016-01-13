@@ -9,6 +9,7 @@ alias s='python -m SimpleHTTPServer'
 # git
 alias ga='git add --all'
 alias gb='git branch'
+alias gbr='git branch --remotes'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -19,15 +20,15 @@ alias gl='git pull'
 alias glr='git pull --rebase'
 alias gp='git push'
 alias gpf='git push --force'
-alias gr='git branch --remotes'
+alias gri='git rebase -i master'
 alias gs='git status'
 
 # git workspace
 alias gw="$HOME/.git_workspace"
-alias wf="$HOME/.git_workspace fetch"
 alias wi="$HOME/.git_workspace info"
 alias wl="$HOME/.git_workspace pull"
 alias wr="$HOME/.git_workspace branch --remotes"
+alias wx="$HOME/.git_workspace remote prune origin"
 
 # vagrant
 alias vd='vagrant destroy'
