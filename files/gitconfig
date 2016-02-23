@@ -7,5 +7,6 @@
   default = current
 [alias]
   info = ! git branch && git status -s && git stash list
+  sync = ! git pull && git remote prune origin
 [core]
   excludesfile = ~/.gitignore

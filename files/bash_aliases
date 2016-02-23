@@ -13,7 +13,6 @@ alias gbr='git branch --remotes'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gf='git fetch'
 alias gg='git grep -I'
 alias gi='git info'
 alias gl='git pull'
@@ -25,11 +24,8 @@ alias grc='git rebase --continue'
 alias gs='git status'
 
 # git workspace
-alias gw="$HOME/.git_workspace"
 alias wi="$HOME/.git_workspace info"
-alias wl="$HOME/.git_workspace pull"
-alias wr="$HOME/.git_workspace branch --remotes"
-alias wx="$HOME/.git_workspace remote prune origin"
+alias wx="$HOME/.git_workspace sync"
 
 # vagrant
 alias vd='vagrant destroy'
