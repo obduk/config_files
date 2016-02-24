@@ -25,7 +25,7 @@ alias gs='git status'
 
 # git workspace
 alias wi="$HOME/.git_workspace info"
-alias wx="$HOME/.git_workspace sync"
+alias wf="$HOME/.git_workspace fetch --prune"
 
 # vagrant
 alias vd='vagrant destroy'
