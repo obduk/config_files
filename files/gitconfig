@@ -6,6 +6,6 @@
 [push]
   default = current
 [alias]
-  info = ! git branch && git status -s && git stash list
+  info = ! git branch && git status --short && git stash list
 [core]
   excludesfile = ~/.gitignore
