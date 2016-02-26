@@ -17,7 +17,7 @@ alias gdm='git diff master'
 alias gf='git fetch --prune'
 alias gg='git grep -I'
 alias gi='git info'
-alias glr='git pull --rebase'
+alias gl='git pull --rebase'
 alias gp='git push'
 alias gpf='git push --force'
 alias grc='git rebase --continue'
@@ -26,6 +26,7 @@ alias gs='git status'
 
 # git workspace
 alias wi="$HOME/.git_workspace info"
+alias wl="$HOME/.git_workspace pull --rebase"
 alias wf="$HOME/.git_workspace fetch --prune"
 
 # vagrant
