@@ -17,16 +17,17 @@ alias gdm='git diff master'
 alias gf='git fetch --prune'
 alias gg='git grep -I'
 alias gi='git info'
-alias gl='git pull --rebase --prune'
+alias gl='git log --graph --abbrev-commit --date=relative --pretty=format:"%C(yellow)%h %Cred%d%Creset %s %Cgreen(%cr) %C(blue)<%an>"'
 alias gp='git push'
 alias gpf='git push --force'
+alias gr='git pull --rebase --prune'
 alias grc='git rebase --continue'
 alias gri='git rebase -i master'
 alias gs='git status'
 
 # git workspace
 alias wi="$HOME/.git_workspace info"
-alias wl="$HOME/.git_workspace pull --rebase --prune"
+alias wr="$HOME/.git_workspace pull --rebase --prune"
 
 # vagrant
 alias vd='vagrant destroy'
