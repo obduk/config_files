@@ -3,11 +3,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision 'shell', inline: <<-SHELL
     apt-get update
-    apt-get install --yes git htop vim-nox
-
-    update-alternatives --set editor /usr/bin/vim.nox
-
-    echo 'if [ -n "$BASH_VERSION" ]; then cd /vagrant; fi' > /etc/profile.d/vagrant.sh
+    apt-get install --yes git
   SHELL
 
   config.vm.provision 'shell', privileged: false, inline: '/home/vagrant/.config_files/bin/bootstrap'
