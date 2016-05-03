@@ -6,7 +6,7 @@
 	url = https://github.com/rodjek/vim-puppet.git
 [submodule "files/vim/bundle/ctrlp.vim"]
 	path = files/vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "files/vim/bundle/tabular"]
 	path = files/vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
