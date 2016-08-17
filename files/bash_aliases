@@ -9,7 +9,7 @@ alias s='python -m SimpleHTTPServer'
 # git
 alias ga='git add --all'
 alias gb='git branch'
-alias gbr='git branch --remotes'
+alias gbr='git branch -r'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
