@@ -4,7 +4,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-autocmd VimEnter * TagbarToggle
 set colorcolumn=80,100
 set list
 set nowrap
