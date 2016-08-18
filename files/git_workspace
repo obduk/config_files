@@ -1,24 +1,10 @@
 #!/bin/bash
 set -e
 
-workspace=$HOME/workspace
-
-if [ ! -d $workspace ]
-then
-  echo "Could not find workspace: $workspace" >&2
-  exit 1
-fi
-
-for repository in `ls $workspace`
+for path in `find $HOME -type d -name .git | sed "s|/\.git$||"`
 do
-  folder=$workspace/$repository
-
-  if [ -d $folder/.git ]
-  then
-    echo $repository
-    cd $folder
-    git $@
-    echo
-  fi
+  echo $path
+  cd $path
+  git $@
+  echo
 done
-
