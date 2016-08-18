@@ -17,6 +17,3 @@ set nowrap
 set list
 
 setlocal spell spelllang=en_gb
-
-autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-autocmd BufRead,BufNewFile Dockerfile set filetype=sh
