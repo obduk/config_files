@@ -25,3 +25,6 @@
 [submodule "files/vim/bundle/vim-polyglot"]
 	path = files/vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "files/vim/bundle/tagbar.git"]
+	path = files/vim/bundle/tagbar.git
+	url = git@github.com:majutsushi/tagbar.git
