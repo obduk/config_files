@@ -31,3 +31,6 @@
 [submodule "files/vim/bundle/vim-sleuth.git"]
 	path = files/vim/bundle/vim-sleuth.git
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "files/vim/bundle/vim-buftabline.git"]
+	path = files/vim/bundle/vim-buftabline.git
+	url = https://github.com/ap/vim-buftabline.git
