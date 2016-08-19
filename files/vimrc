@@ -6,6 +6,5 @@ set smartcase
 
 set colorcolumn=80,100
 set list
-set nowrap
 set number
 setlocal spell spelllang=en_gb
