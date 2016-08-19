@@ -25,12 +25,12 @@
 [submodule "files/vim/bundle/vim-polyglot"]
 	path = files/vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "files/vim/bundle/tagbar.git"]
-	path = files/vim/bundle/tagbar.git
+[submodule "files/vim/bundle/tagbar"]
+	path = files/vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "files/vim/bundle/vim-sleuth.git"]
-	path = files/vim/bundle/vim-sleuth.git
+[submodule "files/vim/bundle/vim-sleuth"]
+	path = files/vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
-[submodule "files/vim/bundle/vim-buftabline.git"]
-	path = files/vim/bundle/vim-buftabline.git
+[submodule "files/vim/bundle/vim-buftabline"]
+	path = files/vim/bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
