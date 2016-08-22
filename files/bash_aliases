@@ -23,8 +23,8 @@ alias gpf='git push --force'
 alias gr='git pull --rebase --all --prune'
 alias grc='git rebase --continue'
 alias gri='git rebase -i master'
+alias gru='git fetch --all --prune && git rebase upstream/master'
 alias gs='git status'
-alias gu='git fetch --all --prune && git rebase upstream/master'
 
 # git workspace
 alias wi="$HOME/.git_workspace info"
