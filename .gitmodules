@@ -1,36 +1,36 @@
-[submodule "files/vim/bundle/vim-sensible"]
-	path = files/vim/bundle/vim-sensible
+[submodule "files/.vim/bundle/vim-sensible"]
+	path = files/.vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "files/vim/bundle/ctrlp.vim"]
-	path = files/vim/bundle/ctrlp.vim
+[submodule "files/.vim/bundle/ctrlp.vim"]
+	path = files/.vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "files/vim/bundle/tabular"]
-	path = files/vim/bundle/tabular
+[submodule "files/.vim/bundle/tabular"]
+	path = files/.vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "files/vim/bundle/nerdtree"]
-	path = files/vim/bundle/nerdtree
+[submodule "files/.vim/bundle/nerdtree"]
+	path = files/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "files/vim/bundle/vim-fugitive"]
-	path = files/vim/bundle/vim-fugitive
+[submodule "files/.vim/bundle/vim-fugitive"]
+	path = files/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "files/vim/bundle/tcomment_vim"]
-	path = files/vim/bundle/tcomment_vim
+[submodule "files/.vim/bundle/tcomment_vim"]
+	path = files/.vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
-[submodule "files/vim/bundle/vim-rails"]
-	path = files/vim/bundle/vim-rails
+[submodule "files/.vim/bundle/vim-rails"]
+	path = files/.vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule "files/vim/bundle/gundo"]
-	path = files/vim/bundle/gundo
+[submodule "files/.vim/bundle/gundo.vim"]
+	path = files/.vim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "files/vim/bundle/vim-polyglot"]
-	path = files/vim/bundle/vim-polyglot
+[submodule "files/.vim/bundle/vim-polyglot"]
+	path = files/.vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "files/vim/bundle/tagbar"]
-	path = files/vim/bundle/tagbar
+[submodule "files/.vim/bundle/tagbar"]
+	path = files/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "files/vim/bundle/vim-sleuth"]
-	path = files/vim/bundle/vim-sleuth
+[submodule "files/.vim/bundle/vim-sleuth"]
+	path = files/.vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
-[submodule "files/vim/bundle/vim-buftabline"]
-	path = files/vim/bundle/vim-buftabline
+[submodule "files/.vim/bundle/vim-buftabline"]
+	path = files/.vim/bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
