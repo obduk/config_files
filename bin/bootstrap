@@ -6,17 +6,17 @@ cd `dirname $0`/..
 git submodule init
 git submodule update
 
-for file in `ls files`
+for file in `ls -A files`
 do
   if [ -f files/$file ]
   then
-    ln -sfn `pwd`/files/$file ~/.$file
+    ln -sfn `pwd`/files/$file ~/$file
   else
-    mkdir -p ~/.$file
+    mkdir -p ~/$file
 
-    for dir_file in `ls files/$file`
+    for dir_file in `ls -A files/$file`
     do
-      ln -sfn `pwd`/files/$file/$dir_file ~/.$file/$dir_file
+      ln -sfn `pwd`/files/$file/$dir_file ~/$file/$dir_file
     done
   fi
 done
