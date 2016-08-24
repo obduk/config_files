@@ -27,8 +27,8 @@ alias gru='git fetch --all --prune && git rebase upstream/master && git push'
 alias gs='git status'
 
 # git workspace
-alias wi="$HOME/.git_workspace info"
-alias wr="$HOME/.git_workspace pull --rebase --all --prune"
+alias wi="git-workspace info"
+alias wr="git-workspace pull --rebase --all --prune"
 
 # vagrant
 alias vd='vagrant destroy'
