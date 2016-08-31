@@ -10,12 +10,22 @@ for file in `ls -A files`
 do
   if [ -f files/$file ]
   then
+    if [ -f ~/$file ] && [ ! -h ~/$file ]
+    then
+      cp ~/$file ~/$file.backup
+    fi
+
     ln -sfn `pwd`/files/$file ~/$file
   else
     mkdir -p ~/$file
 
     for dir_file in `ls -A files/$file`
     do
+      if [ -f ~/$file/$dir_file ] && [ ! -h ~/$file/$dir_file ]
+      then
+        cp ~/$file/$dir_file ~/$file/$dir_file.backup
+      fi
+
       ln -sfn `pwd`/files/$file/$dir_file ~/$file/$dir_file
     done
   fi
