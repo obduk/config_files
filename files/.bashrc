@@ -1,3 +1,4 @@
+EDITOR=vim
 HISTCONTROL=ignoreboth
 PS1='\u@\h:\w\$ '
 
