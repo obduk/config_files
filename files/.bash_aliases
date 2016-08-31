@@ -1,8 +1,10 @@
 # ~/.bash_aliases
+# alias grep='grep --color=auto'
 alias h='history'
 alias j='jobs'
 alias la='ls -lhAF'
 alias ll='ls -lhF'
+# alias ls='ls --color=auto'
 alias n='sudo netstat -ntlp'
 alias s='python -m SimpleHTTPServer'
 
