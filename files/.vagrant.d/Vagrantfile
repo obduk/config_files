@@ -9,5 +9,5 @@ package 'htop'
 EOF
   end
 
-  config.vm.provision 'shell', privileged: false, inline: '/home/vagrant/.config_files/bin/bootstrap'
+  config.vm.provision 'shell', privileged: false, inline: '/home/vagrant/.config_files/bin/setup'
 end
