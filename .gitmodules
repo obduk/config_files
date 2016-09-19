@@ -34,3 +34,6 @@
 [submodule "files/.vim/bundle/vim-buftabline"]
 	path = files/.vim/bundle/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
+[submodule "files/.vim/bundle/editorconfig-vim"]
+	path = files/.vim/bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
