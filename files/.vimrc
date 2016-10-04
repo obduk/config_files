@@ -6,4 +6,5 @@ set ignorecase
 set list
 set number
 set smartcase
+set undofile
 setlocal spell spelllang=en_gb
