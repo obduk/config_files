@@ -12,8 +12,7 @@ alias s='python -m SimpleHTTPServer'
 
 # git
 alias ga='git add --all'
-alias gb='git branch'
-alias gbr='git branch -r'
+alias gb='git branch --all'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -31,6 +30,7 @@ alias gru='git fetch --all --prune && git rebase upstream/master && git push'
 alias gs='git status'
 
 # git workspace
+alias wb="git-workspace branch --all"
 alias wi="git-workspace info"
 alias wr="git-workspace pull --rebase --all --prune"
 
