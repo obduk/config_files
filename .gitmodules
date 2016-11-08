@@ -25,9 +25,6 @@
 [submodule "files/.vim/bundle/vim-polyglot"]
 	path = files/.vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "files/.vim/bundle/vim-sleuth"]
-	path = files/.vim/bundle/vim-sleuth
-	url = https://github.com/tpope/vim-sleuth.git
 [submodule "files/.vim/bundle/editorconfig-vim"]
 	path = files/.vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
