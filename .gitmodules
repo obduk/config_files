@@ -31,9 +31,6 @@
 [submodule "files/.vim/bundle/vim-sleuth"]
 	path = files/.vim/bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
-[submodule "files/.vim/bundle/vim-buftabline"]
-	path = files/.vim/bundle/vim-buftabline
-	url = https://github.com/ap/vim-buftabline.git
 [submodule "files/.vim/bundle/editorconfig-vim"]
 	path = files/.vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
