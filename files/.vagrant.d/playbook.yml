@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: "install git"
+      action: "{{ ansible_pkg_mgr }} name=git"
+      become: yes
+
+    - name: "install htop"
+      action: "{{ ansible_pkg_mgr }} name=htop"
+      become: yes
+
+    - name: "setup config files"
+      command: /home/vagrant/.config_files/bin/setup
