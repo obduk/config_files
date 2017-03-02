@@ -9,5 +9,9 @@
       action: "{{ ansible_pkg_mgr }} name=htop"
       become: true
 
+    - name: "install tree"
+      action: "{{ ansible_pkg_mgr }} name=tree"
+      become: true
+
     - name: "setup config files"
       command: /home/vagrant/.config_files/bin/setup
