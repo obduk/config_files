@@ -1,10 +1,13 @@
 #!/bin/bash
 set -e
 
-for path in `find $HOME/workspace -type d -name .git | sed "s|/\.git$||"`
+dir=$PWD
+
+for path in `find $dir -type d -name .git | sed "s|/\.git$||"`
 do
-  echo $path
   cd $path
+  echo $PWD
   git $@
+  cd $dir
   echo
 done

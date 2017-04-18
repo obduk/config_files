@@ -26,9 +26,12 @@ alias gri='git rebase -i master'
 alias gru='git fetch --all --prune && git rebase upstream/master && git push'
 
 # git workspace
-alias wb="git-workspace branch -a"
-alias wi="git-workspace info"
-alias wr="git-workspace pull --rebase --all --prune"
+alias gwb="git-workspace branch -a"
+alias gwi="git-workspace info"
+alias gwr="git-workspace pull --rebase --all --prune"
+alias wb="cd $HOME/workspace && git-workspace branch -a"
+alias wi="cd $HOME/workspace && git-workspace info"
+alias wr="cd $HOME/workspace && git-workspace pull --rebase --all --prune"
 
 # vagrant
 alias vd='vagrant destroy'
