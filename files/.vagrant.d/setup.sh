@@ -2,7 +2,7 @@
 set -e
 
 if which yum > /dev/null 2>&1; then
-  install='yum install'
+  install='yum install --assumeyes'
 elif which apt-get > /dev/null 2>&1; then
   install='apt-get install --yes '
 else
