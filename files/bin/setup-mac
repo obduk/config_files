@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+if ! which brew > /dev/null 2>&1; then
+  echo 'installing brew'
+
+  $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+brew install \
+  bash-completion \
+  git \
+  ncdu \
+  tmux
