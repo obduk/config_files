@@ -14,5 +14,3 @@ $install \
   git \
   htop \
   tree
-
-/home/vagrant/.config_files/bin/setup
