@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+if which yum > /dev/null 2>&1; then
+  install='yum install --assumeyes'
+elif which apt-get > /dev/null 2>&1; then
+  install='apt-get install --yes '
+elif [ "$(uname)" == "Darwin" ]; then
+  if ! which brew > /dev/null 2>&1; then
+    echo 'installing brew'
+
+    $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+
+  install='brew install'
+else
+  echo "can't find package manager"
+  exit 1
+fi
+
+$install \
+  bash-completion \
+  git \
+  htop \
+  ncdu \
+  tmux \
+  tree \
+  watch
