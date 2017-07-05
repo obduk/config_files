@@ -9,3 +9,4 @@
   info = ! git branch && git status --short && git stash list
 [core]
   excludesfile = ~/.gitignore
+  preloadindex = true
