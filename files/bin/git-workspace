@@ -3,7 +3,7 @@ set -e
 
 dir=$PWD
 
-for path in `find $dir -type d -name .git | sed "s|/\.git$||"`
+for path in `find $dir -type d -name .git | sort | sed "s|/\.git$||"`
 do
   cd $path
   echo $PWD
