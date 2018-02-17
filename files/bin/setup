@@ -1,10 +1,25 @@
 #!/bin/bash
 set -e
 
+default_packages="
+bash-completion
+git
+htop
+ncdu
+tmux
+tree
+watch
+"
+
+# setup Centos
 if which yum > /dev/null 2>&1; then
-  install='yum install --assumeyes'
+  yum install --assumeyes $default_packages
+
+# setup Ubuntu
 elif which apt-get > /dev/null 2>&1; then
-  install='apt-get install --yes'
+  apt-get install --yes $default_packages
+
+# setup Mac
 elif [ "$(uname)" == "Darwin" ]; then
   if ! which brew > /dev/null 2>&1; then
     echo 'installing brew'
@@ -12,25 +27,14 @@ elif [ "$(uname)" == "Darwin" ]; then
     $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
-  install='brew install'
+  brew install $default_packages \
+    awscli \
+    heroku \
+    python2 \
+    python3 \
+    rbenv
 
-  extra="
-awscli
-heroku
-python2
-python3
-rbenv
-"
 else
   echo "can't find package manager"
   exit 1
 fi
-
-$install $extra \
-  bash-completion \
-  git \
-  htop \
-  ncdu \
-  tmux \
-  tree \
-  watch
