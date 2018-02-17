@@ -4,7 +4,7 @@ set -e
 if which yum > /dev/null 2>&1; then
   install='yum install --assumeyes'
 elif which apt-get > /dev/null 2>&1; then
-  install='apt-get install --yes '
+  install='apt-get install --yes'
 elif [ "$(uname)" == "Darwin" ]; then
   if ! which brew > /dev/null 2>&1; then
     echo 'installing brew'
@@ -13,12 +13,20 @@ elif [ "$(uname)" == "Darwin" ]; then
   fi
 
   install='brew install'
+
+  extra="
+awscli
+heroku
+python2
+python3
+rbenv
+"
 else
   echo "can't find package manager"
   exit 1
 fi
 
-$install \
+$install $extra \
   bash-completion \
   git \
   htop \
