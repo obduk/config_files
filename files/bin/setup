@@ -34,6 +34,14 @@ elif [ "$(uname)" == "Darwin" ]; then
     python3 \
     rbenv
 
+  brew cask install \
+    bbc-iplayer-downloads \
+    google-backup-and-sync \
+    google-chrome \
+    keepassx \
+    slack \
+    virtualbox
+
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs" ]; then
     if [ ! -h "$HOME/iCloud Drive" ]; then
       ln -sfn "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud Drive"
