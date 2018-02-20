@@ -36,6 +36,7 @@ elif [ "$(uname)" == "Darwin" ]; then
 
   brew cask install \
     bbc-iplayer-downloads \
+    docker \
     google-backup-and-sync \
     google-chrome \
     keepassx \
