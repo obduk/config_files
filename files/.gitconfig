@@ -1,6 +1,5 @@
 [user]
 	name = Owen Davies
-	email = git@obduk.com
 [color]
 	ui = auto
 [push]
@@ -10,3 +9,4 @@
 [core]
 	excludesfile = ~/.gitignore
 	preloadindex = true
+	sshCommand = "WARNING: set per repo with GIT_SSH_COMMAND then `git config core.sshCommand`"
