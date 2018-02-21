@@ -42,6 +42,7 @@ elif [ "$(uname)" == "Darwin" ]; then
     keepassx \
     slack \
     tunnelblick \
+    vagrant \
     virtualbox
 
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs" ]; then
