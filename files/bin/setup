@@ -41,6 +41,7 @@ elif [ "$(uname)" == "Darwin" ]; then
     google-chrome \
     keepassx \
     slack \
+    tunnelblick \
     virtualbox
 
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs" ]; then
