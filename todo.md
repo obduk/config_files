@@ -5,6 +5,8 @@ Mac Setup
 * Battery icon
   * Show percentage
 * Finder
+  * Show view options
+    * Show Library Folder
   * General
     * New finder windows shows home
   * Sidbar
@@ -54,7 +56,19 @@ Mac Setup
     * Install macOS updates
   * Bluetooth
     * Show Bluetooth in menu bar
+  * Sharing
+    * Computer name
   * Date & Time
     * Clock
       * Untick use a 24 hour clock
       * Show date
+  * Time Machine
+    * Show Time Machine in menu bar
+    * Select Backup Disk
+      * Encrypt
+    * Options
+      * Exclude
+        * ~/.vagrant.d
+        * ~/Library/Caches/Homebrew
+        * ~/Library/Containers/com.docker.docker
+        * ~/VirtualBox VMs
