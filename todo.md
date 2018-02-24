@@ -1,6 +1,9 @@
 Mac Setup
 ---------
 
+* Airport Utility
+  * Check for updates automatically Daily
+  * Monitor AirPort base stations for problems
 * Dock icons
 * Battery icon
   * Show percentage
