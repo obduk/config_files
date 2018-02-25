@@ -6,6 +6,7 @@ bash-completion
 git
 htop
 ncdu
+nmap
 tmux
 tree
 watch
