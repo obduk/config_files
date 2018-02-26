@@ -1,32 +1,36 @@
 #!/bin/bash
 set -e
 
-default_packages="
-bash-completion
-git
-htop
-ncdu
-nmap
-tmux
-tree
-watch
-"
+function setup_mac_add_icloud_link {
+  link_source="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+  link_target="$HOME/iCloud Drive"
 
-# setup Centos
-if which yum > /dev/null 2>&1; then
-  yum install --assumeyes $default_packages
-
-# setup Ubuntu
-elif which apt-get > /dev/null 2>&1; then
-  apt-get install --yes $default_packages
-
-# setup Mac
-elif [ "$(uname)" == "Darwin" ]; then
-  if ! which brew > /dev/null 2>&1; then
-    echo 'installing brew'
-
-    $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  if [ -d "$link_source" ] && [ ! -h "$link_target" ]; then
+    ln -sfn "$link_source" "$link_target"
   fi
+}
+
+function setup_mac_add_icloud_dir_link {
+  link_dir=$1
+  link_source="$HOME/Library/Mobile Documents/com~apple~CloudDocs/$link_dir"
+  link_target="$HOME/$link_dir"
+
+  if [ -d "$link_source" ] && [ ! -h "$link_target" ]; then
+    ln -sfn "$link_source" "$link_target"
+  fi
+}
+
+function setup_mac_install_brew {
+  if ! command -v brew > /dev/null 2>&1; then
+    $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+}
+
+function setup_mac {
+  setup_mac_add_icloud_link
+  setup_mac_add_icloud_dir_link .aws
+  setup_mac_add_icloud_dir_link .ssh
+  setup_mac_install_brew
 
   brew install $default_packages \
     awscli \
@@ -45,13 +49,29 @@ elif [ "$(uname)" == "Darwin" ]; then
     tunnelblick \
     vagrant \
     virtualbox
+}
 
-  if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs" ]; then
-    if [ ! -h "$HOME/iCloud Drive" ]; then
-      ln -sfn "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud Drive"
-    fi
-  fi
-else
-  echo "can't find package manager"
-  exit 1
+function setup_centos {
+  yum install --assumeyes $default_packages
+}
+
+function setup_ubuntu {
+  apt-get install --yes $default_packages
+}
+
+default_packages="
+bash-completion
+git
+htop
+ncdu
+nmap
+tmux
+tree
+watch
+"
+
+if command -v yum > /dev/null 2>&1; then setup_centos
+elif command -v apt-get > /dev/null 2>&1; then setup_ubuntu
+elif [ "$(uname)" == "Darwin" ]; then setup_mac
+else echo "can't find package manager" && exit 1
 fi
