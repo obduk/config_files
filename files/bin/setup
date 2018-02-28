@@ -35,7 +35,6 @@ function setup_mac {
   brew install $default_packages \
     awscli \
     heroku \
-    python2 \
     python3 \
     rbenv
 
@@ -49,6 +48,8 @@ function setup_mac {
     tunnelblick \
     vagrant \
     virtualbox
+
+  pip3 install virtualenv
 }
 
 function setup_centos {
