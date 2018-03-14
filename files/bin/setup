@@ -32,9 +32,12 @@ function setup_mac {
   setup_mac_add_icloud_dir_link .ssh
   setup_mac_install_brew
 
+  brew upgrade
+
   brew install $default_packages \
     awscli \
     heroku \
+    python2 \
     python3 \
     rbenv
 
