@@ -37,6 +37,7 @@ function setup_mac {
   brew install $default_packages \
     awscli \
     heroku \
+    postgresql \
     python2 \
     python3 \
     rbenv
