@@ -38,6 +38,8 @@ function setup_mac {
     awscli \
     heroku \
     imagemagick \
+    libmagic \
+    node \
     postgresql \
     python2 \
     python3 \
