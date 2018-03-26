@@ -55,9 +55,7 @@ function setup_mac {
     google-chrome \
     keepassx \
     slack \
-    tunnelblick \
-    vagrant \
-    virtualbox
+    tunnelblick
 
   pip3 install virtualenv
 }

@@ -13,7 +13,3 @@ fi
 if [ -d "$HOME/.rbenv/shims" ]; then
     export PATH="$HOME/.rbenv/shims:$PATH"
 fi
-
-if [ -d "/vagrant" ] && [ "$PWD" == "$HOME" ]; then
-    cd "/vagrant"
-fi

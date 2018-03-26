@@ -71,7 +71,5 @@ Mac Setup
       * Encrypt
     * Options
       * Exclude
-        * ~/.vagrant.d
         * ~/Library/Caches/Homebrew
         * ~/Library/Containers/com.docker.docker
-        * ~/VirtualBox VMs

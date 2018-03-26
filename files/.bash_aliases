@@ -32,12 +32,3 @@ alias gwr="git-workspace pull --rebase --all --prune"
 alias wb="cd $HOME/workspace && git-workspace branch -a"
 alias wi="cd $HOME/workspace && git-workspace info"
 alias wr="cd $HOME/workspace && git-workspace pull --rebase --all --prune"
-
-# vagrant
-alias vd='vagrant destroy'
-alias vg='vagrant global-status'
-alias vh='vagrant halt'
-alias vp='vagrant provision'
-alias vr='vagrant reload'
-alias vs='vagrant ssh -c "tmux a || tmux"'
-alias vu='vagrant up && vs'
