@@ -1,9 +1,0 @@
-CONFIG_PATH = '/home/vagrant/.config_files'
-
-Vagrant.configure(2) do |config|
-  config.vm.synced_folder "#{ENV['HOME']}/workspace/config_files", CONFIG_PATH, nfs: true
-
-  config.vm.provision 'shell', inline: File.join(CONFIG_PATH, 'files', 'bin', 'setup')
-
-  config.vm.provision 'shell', privileged: false, inline: File.join(CONFIG_PATH, 'bin', 'setup')
-end
