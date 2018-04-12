@@ -8,6 +8,9 @@ alias ll='ls -lhF'
 alias n='sudo netstat -ntlp'
 alias s='python -m SimpleHTTPServer'
 
+# docker
+alias dcu='docker-compose up -d'
+
 # git
 alias ga='git add --all'
 alias gb='git branch -a'
