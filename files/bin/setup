@@ -36,6 +36,7 @@ function setup_mac {
 
   brew install $default_packages \
     awscli \
+    chromedriver \
     heroku \
     imagemagick \
     libmagic \
@@ -43,10 +44,7 @@ function setup_mac {
     postgresql \
     python2 \
     python3 \
-    qt@5.5 \
     rbenv
-
-  brew link --force qt@5.5
 
   brew cask install \
     bbc-iplayer-downloads \
