@@ -10,6 +10,7 @@ alias s='python -m SimpleHTTPServer'
 
 # docker
 alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
 
 # git
 alias ga='git add --all'
