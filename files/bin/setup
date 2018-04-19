@@ -43,7 +43,8 @@ function setup_mac {
     postgresql \
     python2 \
     python3 \
-    rbenv
+    rbenv \
+    yarn
 
   brew cask install \
     bbc-iplayer-downloads \
