@@ -32,6 +32,7 @@ function setup_mac {
   setup_mac_add_icloud_dir_link .ssh
   setup_mac_install_brew
 
+  brew update
   brew upgrade
 
   brew install $default_packages \
@@ -54,6 +55,12 @@ function setup_mac {
     keepassx \
     slack \
     tunnelblick
+
+  brew cleanup -s
+  brew cask cleanup
+  brew prune
+  brew doctor
+  brew missing
 
   pip3 install virtualenv
 }
