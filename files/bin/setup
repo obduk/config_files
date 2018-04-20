@@ -62,7 +62,11 @@ function setup_mac {
   brew doctor
   brew missing
 
-  pip3 install virtualenv
+  pip install --upgrade pip
+  pip install --upgrade setuptools
+  pip3 install --upgrade pip
+  pip3 install --upgrade setuptools
+  pip3 install --upgrade virtualenv
 }
 
 function setup_centos {
@@ -89,3 +93,5 @@ elif command -v apt-get > /dev/null 2>&1; then setup_ubuntu
 elif [ "$(uname)" == "Darwin" ]; then setup_mac
 else echo "can't find package manager" && exit 1
 fi
+
+# setup complete
