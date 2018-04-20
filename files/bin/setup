@@ -94,4 +94,4 @@ elif [ "$(uname)" == "Darwin" ]; then setup_mac
 else echo "can't find package manager" && exit 1
 fi
 
-# setup complete
+echo "setup complete"
