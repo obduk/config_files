@@ -9,8 +9,11 @@ alias n='sudo netstat -ntlp'
 alias s='python -m SimpleHTTPServer'
 
 # docker
-alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
+alias dcu='docker-compose up -d'
+alias di='docker images'
+alias dps='docker ps -a'
+alias dv='docker volume ls'
 
 # git
 alias ga='git add --all'
