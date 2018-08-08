@@ -1,4 +1,6 @@
 branches:
   only: master
 
+language: bash
+
 script: ./bin/setup
