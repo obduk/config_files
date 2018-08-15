@@ -42,8 +42,6 @@ function setup_mac {
     libmagic \
     node \
     postgresql \
-    python2 \
-    python3 \
     rbenv \
     yarn
 
@@ -60,12 +58,6 @@ function setup_mac {
   brew prune
   brew doctor
   brew missing
-
-  pip install --upgrade pip
-  pip install --upgrade setuptools
-  pip3 install --upgrade pip
-  pip3 install --upgrade setuptools
-  pip3 install --upgrade virtualenv
 }
 
 function setup_centos {
