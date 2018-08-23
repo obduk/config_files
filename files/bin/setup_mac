@@ -54,7 +54,8 @@ brew install \
   rbenv \
   tmux \
   tree \
-  watch
+  watch \
+  yarn
 
 brew cask install \
   docker \
