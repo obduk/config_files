@@ -63,6 +63,7 @@ brew cask install \
   google-chrome \
   keepassx \
   slack \
+  spotify \
   tunnelblick
 
 brew cleanup
