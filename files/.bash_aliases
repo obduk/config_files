@@ -8,6 +8,12 @@ alias ll='ls -lhF'
 alias n='sudo netstat -ntlp'
 alias s='python -m SimpleHTTPServer'
 
+# brew
+alias bsl='brew services list'
+alias bss='brew services start'
+alias bsr='brew services restart'
+alias bsd='brew services stop'
+
 # docker
 alias dcd='docker-compose down'
 alias dcu='docker-compose up -d'
