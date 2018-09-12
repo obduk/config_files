@@ -5,25 +5,23 @@ alias j='jobs'
 alias jsonlint='python -m json.tool'
 alias la='ls -lhAF'
 alias ll='ls -lhF'
-alias n='sudo netstat -ntlp'
 alias s='python -m SimpleHTTPServer'
 
 # brew
 alias bsl='brew services list'
-alias bss='brew services start'
-alias bsr='brew services restart'
-alias bsd='brew services stop'
+alias bss='brew services start --all'
+alias bsd='brew services stop --all'
 
 # docker
 alias dcd='docker-compose down'
-alias dcu='docker-compose up -d'
+alias dcu='docker-compose up --detach'
 alias di='docker images'
-alias dps='docker ps -a'
+alias dps='docker ps --all'
 alias dv='docker volume ls'
 
 # git
 alias ga='git add --all'
-alias gb='git branch -a'
+alias gb='git branch --all'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
@@ -39,9 +37,7 @@ alias gri='git rebase -i master'
 alias gru='git fetch --all --prune && git rebase upstream/master && git push'
 
 # git workspace
-alias gwb="git-workspace branch -a"
+alias gwb="git-workspace branch --all"
 alias gwi="git-workspace info"
-alias gwr="git-workspace pull --rebase --all --prune"
-alias wb="cd $HOME/workspace && git-workspace branch -a"
+alias wb="cd $HOME/workspace && git-workspace branch --all"
 alias wi="cd $HOME/workspace && git-workspace info"
-alias wr="cd $HOME/workspace && git-workspace pull --rebase --all --prune"
