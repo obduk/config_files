@@ -1,4 +1,5 @@
 version: 2
+
 jobs:
   build:
     docker:
@@ -8,9 +9,7 @@ jobs:
       - checkout
 
       - run:
-          name: Setup
           command: ./bin/setup
 
       - run:
-          name: Changes
           command: ./bin/changes
