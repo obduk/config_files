@@ -47,9 +47,6 @@ Mac Setup
     * Sound Effects
       * Show volume in menu bar
   * iCloud
-    * iCloud Drive
-      * Desktop & Documents Folders
-      * Turn off optimize
     * Reminders
     * Notes
     * Find my mac
