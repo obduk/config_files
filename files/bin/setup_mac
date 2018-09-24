@@ -1,40 +1,11 @@
 #!/bin/bash
 set -e
 
-function add_icloud_link {
-  link_source="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
-  link_target="$HOME/iCloud Drive"
-
-  if [ -d "$link_source" ] && [ ! -h "$link_target" ]; then
-    ln -sfn "$link_source" "$link_target"
-  fi
-}
-
-function add_icloud_dir_link {
-  link_dir=$1
-  link_source="$HOME/Library/Mobile Documents/com~apple~CloudDocs/$link_dir"
-  link_target="$HOME/$link_dir"
-
-  if [ -d "$link_source" ] && [ ! -h "$link_target" ]; then
-    ln -sfn "$link_source" "$link_target"
-  fi
-}
-
-function install_brew {
-  if ! command -v brew > /dev/null 2>&1; then
-    $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  fi
-}
+if ! command -v brew > /dev/null 2>&1; then
+  $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 set -v
-
-add_icloud_link
-
-add_icloud_dir_link .aws
-
-add_icloud_dir_link .ssh
-
-install_brew
 
 brew update
 
