@@ -7,18 +7,6 @@ alias la='ls -lhAF'
 alias ll='ls -lhF'
 alias s='python -m SimpleHTTPServer'
 
-# brew
-alias bsl='brew services list'
-alias bss='brew services start --all'
-alias bsd='brew services stop --all'
-
-# docker
-alias dcd='docker-compose down'
-alias dcu='docker-compose up --detach'
-alias di='docker images'
-alias dps='docker ps --all'
-alias dv='docker volume ls'
-
 # git
 alias ga='git add --all'
 alias gb='git branch --all'
@@ -28,7 +16,6 @@ alias gdc='git diff --cached'
 alias gdm='git diff master'
 alias gg='git grep -I'
 alias gi='git info'
-alias gl='git log --graph --abbrev-commit --date=relative --pretty=format:"%C(yellow)%h %Cred%d%Creset %s %Cgreen(%cr) %C(blue)<%an>"'
 alias gp='git push'
 alias gpf='git push --force'
 alias gr='git pull --rebase --all --prune'
