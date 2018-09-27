@@ -32,11 +32,12 @@ brew cask install \
   docker \
   google-backup-and-sync \
   google-chrome \
-  homebrew/cask-drivers/sonos \
+  sonos \
   keepassx \
   slack \
   spotify \
-  tunnelblick
+  tunnelblick \
+  visual-studio-code
 
 brew cleanup
 
