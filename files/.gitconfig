@@ -8,5 +8,4 @@
 	info = ! git branch && git status --short && git stash list
 [core]
 	excludesfile = ~/.gitignore
-	preloadindex = true
 	sshCommand = "WARNING: set per repo with GIT_SSH_COMMAND then `git config core.sshCommand`"
