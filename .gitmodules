@@ -1,30 +1,6 @@
 [submodule "files/.vim/bundle/vim-sensible"]
 	path = files/.vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "files/.vim/bundle/ctrlp.vim"]
-	path = files/.vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "files/.vim/bundle/tabular"]
-	path = files/.vim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule "files/.vim/bundle/nerdtree"]
-	path = files/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "files/.vim/bundle/vim-fugitive"]
-	path = files/.vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "files/.vim/bundle/tcomment_vim"]
-	path = files/.vim/bundle/tcomment_vim
-	url = https://github.com/tomtom/tcomment_vim.git
-[submodule "files/.vim/bundle/vim-rails"]
-	path = files/.vim/bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "files/.vim/bundle/gundo.vim"]
-	path = files/.vim/bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "files/.vim/bundle/vim-polyglot"]
 	path = files/.vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "files/.vim/bundle/editorconfig-vim"]
-	path = files/.vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
