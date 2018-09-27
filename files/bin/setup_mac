@@ -45,4 +45,17 @@ brew doctor
 
 brew missing
 
+code --instal-extensions alefragnani.project-manager
+code --instal-extensions beauallison.brew-services
+code --instal-extensions dbaeumer.vscode-eslint
+code --instal-extensions donjayamanne.githistory
+code --instal-extensions eamodio.gitlens
+code --instal-extensions EditorConfig.EditorConfig
+code --instal-extensions formulahendry.auto-close-tag
+code --instal-extensions ms-python.python
+code --instal-extensions msjsdiag.debugger-for-chrome
+code --instal-extensions PeterJausovec.vscode-docker
+code --instal-extensions rebornix.ruby
+code --instal-extensions shinnn.stylelint
+
 echo "setup complete"
