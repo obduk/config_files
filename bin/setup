@@ -30,3 +30,6 @@ do
     done
   fi
 done
+
+git config --global alias.info "! git branch && git status --short && git stash list"
+git config --global core.excludesfile "~/.gitignore"
