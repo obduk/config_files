@@ -1,6 +1,5 @@
 execute pathogen#infect()
 
-set colorcolumn=80,100
 set expandtab
 set hlsearch
 set ignorecase
