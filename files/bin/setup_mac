@@ -16,23 +16,18 @@ brew install \
   bash-completion \
   git \
   heroku \
-  htop \
   imagemagick \
   libmagic \
   ncdu \
   node \
   postgresql \
   rbenv \
-  tmux \
-  tree \
-  watch \
   yarn
 
 brew cask install \
   docker \
   google-backup-and-sync \
   google-chrome \
-  sonos \
   keepassx \
   slack \
   spotify \
