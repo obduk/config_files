@@ -25,6 +25,7 @@ brew install \
   yarn
 
 brew cask install \
+  chromedriver \
   docker \
   google-backup-and-sync \
   google-chrome \
