@@ -20,6 +20,7 @@ brew install \
   imagemagick \
   libmagic \
   ncdu \
+  neovim \
   node \
   postgresql \
   rbenv \
