@@ -14,6 +14,7 @@ brew upgrade
 brew install \
   awscli \
   bash-completion \
+  circleci \
   git \
   heroku \
   imagemagick \
