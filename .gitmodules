@@ -1,6 +1,0 @@
-[submodule "files/.vim/bundle/vim-sensible"]
-	path = files/.vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule "files/.vim/bundle/vim-polyglot"]
-	path = files/.vim/bundle/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
