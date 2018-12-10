@@ -1,11 +1,11 @@
 if [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
+  . "$HOME/.bashrc"
 fi
 
 if [ -d "$HOME/bin" ]; then
-    export PATH="$HOME/bin:$PATH"
+  export PATH="$HOME/bin:$PATH"
 fi
 
 if [ -d "$HOME/.rbenv/shims" ]; then
-    export PATH="$HOME/.rbenv/shims:$PATH"
+  export PATH="$HOME/.rbenv/shims:$PATH"
 fi
