@@ -18,7 +18,7 @@ do
   then
     if [ -f $target ]
     then
-      echoexec cp $target $target.backup
+      echoexec mv $target $target.backup
     fi
 
     directory=$(dirname $target)
@@ -34,6 +34,5 @@ done
 
 set -v
 
-git config --global alias.info "! git branch && git status --short && git stash list"
 git config --global core.excludesfile "~/.gitignore"
 git config --global fetch.prune true
