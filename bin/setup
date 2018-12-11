@@ -1,34 +1,30 @@
 #!/bin/bash
 set -e
 
-cd `dirname $0`/..
+cd $(dirname $0)/..
 
-function echoexec {
+function echoexec() {
   echo $@
   $@
 }
 
 cd files
 
-for file in $(git ls-files)
-do
+for file in $(git ls-files); do
   target=$HOME/$file
 
-  if [ ! -h $target ]
-  then
-    if [ -f $target ]
-    then
+  if [ ! -h $target ]; then
+    if [ -f $target ]; then
       echoexec mv $target $target.backup
     fi
 
     directory=$(dirname $target)
 
-    if [ ! -d $directory ]
-    then
+    if [ ! -d $directory ]; then
       echoexec mkdir -p $directory
     fi
 
-    echoexec ln -sfn `pwd`/$file $target
+    echoexec ln -sfn $(pwd)/$file $target
   fi
 done
 

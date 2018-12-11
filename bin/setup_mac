@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if ! command -v brew > /dev/null 2>&1; then
+if ! command -v brew >/dev/null 2>&1; then
   $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -16,6 +16,7 @@ brew install \
   bash-completion \
   circleci \
   git \
+  go \
   heroku \
   imagemagick \
   libmagic \
@@ -26,6 +27,7 @@ brew install \
   python2 \
   python3 \
   rbenv \
+  shfmt \
   yarn
 
 brew cask install \
