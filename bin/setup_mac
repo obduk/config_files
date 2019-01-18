@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if ! command -v brew >/dev/null 2>&1; then
+if ! type brew &>/dev/null; then
   $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -49,10 +49,16 @@ brew doctor
 
 brew missing
 
+heroku plugins:install autocomplete
+
 pip install --upgrade pip
+
 pip install --upgrade setuptools
+
 pip3 install --upgrade pip
+
 pip3 install --upgrade setuptools
+
 pip3 install --upgrade virtualenv
 
 echo "setup complete"
