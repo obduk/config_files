@@ -27,6 +27,7 @@ brew install \
   python2 \
   python3 \
   rbenv \
+  redis \
   shfmt \
   terraform \
   yarn
