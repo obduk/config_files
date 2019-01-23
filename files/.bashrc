@@ -1,6 +1,5 @@
 PS1='\u@\h:\w\$ '
 
-export VISUAL=nvim
 export CLICOLOR=1
 
 # bash aliases
