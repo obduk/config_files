@@ -28,7 +28,71 @@ for file in $(git ls-files); do
   fi
 done
 
+if ! type brew &>/dev/null; then
+  $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 set -v
 
+brew update
+
+brew upgrade
+
+brew install \
+  awscli \
+  bash-completion \
+  circleci \
+  git \
+  go \
+  heroku/brew/heroku \
+  imagemagick \
+  libmagic \
+  ncdu \
+  neovim \
+  node \
+  postgresql \
+  python2 \
+  python3 \
+  rbenv \
+  redis \
+  shfmt \
+  terraform \
+  yarn
+
+brew cask install \
+  chromedriver \
+  docker \
+  google-backup-and-sync \
+  google-chrome \
+  keepassx \
+  postman \
+  slack \
+  spotify \
+  tunnelblick \
+  visual-studio-code
+
+brew cleanup
+
+brew doctor
+
+brew missing
+
+git config --global core.editor "code --wait"
+
 git config --global core.excludesfile "~/.gitignore"
+
 git config --global fetch.prune true
+
+heroku plugins:install autocomplete
+
+pip install --upgrade pip
+
+pip install --upgrade setuptools
+
+pip3 install --upgrade pip
+
+pip3 install --upgrade setuptools
+
+pip3 install --upgrade virtualenv
+
+echo "setup complete"
