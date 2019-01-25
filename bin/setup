@@ -72,27 +72,22 @@ brew cask install \
   visual-studio-code
 
 brew cleanup
-
 brew doctor
-
 brew missing
 
 git config --global core.editor "code --wait"
-
 git config --global core.excludesfile "~/.gitignore"
-
 git config --global fetch.prune true
 
 heroku plugins:install autocomplete
 
-pip install --upgrade pip
+pip2 install --upgrade \
+  pip \
+  setuptools
 
-pip install --upgrade setuptools
-
-pip3 install --upgrade pip
-
-pip3 install --upgrade setuptools
-
-pip3 install --upgrade virtualenv
+pip3 install --upgrade \
+  pip \
+  setuptools \
+  virtualenv
 
 echo "setup complete"
