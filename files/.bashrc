@@ -3,9 +3,9 @@ PS1='\u@\h:\w\$ '
 export CLICOLOR=1
 
 # bash aliases
-if [ -f "$HOME/.bash_aliases" ]; then
-  . "$HOME/.bash_aliases"
-fi
+alias grep='grep --color=auto'
+alias la='ls -lhAF'
+alias ll='ls -lhF'
 
 # brew bash completion
 if type brew &>/dev/null; then
