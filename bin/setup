@@ -18,12 +18,6 @@ for file in $(git ls-files); do
       echoexec mv $target $target.backup
     fi
 
-    directory=$(dirname $target)
-
-    if [ ! -d $directory ]; then
-      echoexec mkdir -p $directory
-    fi
-
     echoexec ln -sfn $(pwd)/$file $target
   fi
 done
