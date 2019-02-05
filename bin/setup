@@ -3,6 +3,69 @@ set -e
 
 cd $(dirname $0)/..
 
+function install_brew_formulas() {
+  REQUIRED="
+    awscli
+    bash-completion
+    circleci
+    git
+    go
+    heroku
+    imagemagick
+    libmagic
+    ncdu
+    neovim
+    node
+    postgresql
+    python
+    python@2
+    rbenv
+    redis
+    shfmt
+    terraform
+    yarn
+  "
+
+  INSTALLED=$(brew list)
+
+  for formula in $REQUIRED; do
+    grep -q $formula <<<$INSTALLED || brew install $formula
+  done
+}
+
+function install_brew_casks() {
+  REQUIRED="
+    chromedriver
+    docker
+    google-backup-and-sync
+    google-chrome
+    keepassx
+    postman
+    slack
+    spotify
+    tunnelblick
+    visual-studio-code
+  "
+
+  INSTALLED=$(brew cask list)
+
+  for cask in $REQUIRED; do
+    grep -q $cask <<<$INSTALLED || brew cask install $cask
+  done
+}
+
+function install_heroku_plugins() {
+  REQUIRED="
+    autocomplete
+  "
+
+  INSTALLED=$(heroku plugins)
+
+  for plugin in $REQUIRED; do
+    grep -q $plugin <<<$INSTALLED || heroku plugins:install $plugin
+  done
+}
+
 function echoexec() {
   echo $@
   $@
@@ -32,48 +95,19 @@ brew update
 
 brew upgrade
 
-brew install \
-  awscli \
-  bash-completion \
-  circleci \
-  git \
-  go \
-  heroku/brew/heroku \
-  imagemagick \
-  libmagic \
-  ncdu \
-  neovim \
-  node \
-  postgresql \
-  python2 \
-  python3 \
-  rbenv \
-  redis \
-  shfmt \
-  terraform \
-  yarn
+install_brew_formulas
 
-brew cask install \
-  chromedriver \
-  docker \
-  google-backup-and-sync \
-  google-chrome \
-  keepassx \
-  postman \
-  slack \
-  spotify \
-  tunnelblick \
-  visual-studio-code
+install_brew_casks
 
 brew cleanup
+
 brew doctor
-brew missing
 
 git config --global core.editor "code --wait"
 git config --global core.excludesfile "~/.gitignore"
 git config --global fetch.prune true
 
-heroku plugins:install autocomplete
+install_heroku_plugins
 
 pip2 install --upgrade \
   pip \
