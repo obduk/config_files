@@ -30,6 +30,7 @@ Mac Setup
       * Speed
   * Trackpad
     * Point & click
+      * Turn off look up
       * Tap to click
       * Speed
   * Printers & Scanners
