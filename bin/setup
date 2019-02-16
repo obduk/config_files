@@ -23,6 +23,7 @@ function install_brew_formulas() {
     redis
     shfmt
     terraform
+    tree
     yarn
   "
 
