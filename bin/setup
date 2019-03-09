@@ -3,11 +3,24 @@ set -e
 
 cd $(dirname $0)/..
 
+function install_nvm() {
+  if ! type nvm &>/dev/null; then
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+  fi
+}
+
+function install_brew() {
+  if ! type brew &>/dev/null; then
+    $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+}
+
 function install_brew_formulas() {
   REQUIRED="
     awscli
     bash-completion
     circleci
+    coreutils
     git
     go
     heroku
@@ -15,7 +28,6 @@ function install_brew_formulas() {
     libmagic
     ncdu
     neovim
-    node
     postgresql
     python
     python@2
@@ -24,13 +36,24 @@ function install_brew_formulas() {
     shfmt
     terraform
     tree
-    yarn
   "
 
   INSTALLED=$(brew list)
 
   for formula in $REQUIRED; do
     grep -q $formula <<<$INSTALLED || brew install $formula
+  done
+}
+
+function install_brew_formulas_without_dependencies() {
+  REQUIRED="
+    yarn
+  "
+
+  INSTALLED=$(brew list)
+
+  for formula in $REQUIRED; do
+    grep -q $formula <<<$INSTALLED || brew install $formula --ignore-dependencies
   done
 }
 
@@ -86,11 +109,11 @@ for file in $(git ls-files); do
   fi
 done
 
-if ! type brew &>/dev/null; then
-  $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 set -v
+
+install_nvm
+
+install_brew
 
 brew update
 
@@ -98,11 +121,13 @@ brew upgrade
 
 install_brew_formulas
 
+install_brew_formulas_without_dependencies
+
 install_brew_casks
 
 brew cleanup
 
-brew doctor
+brew doctor || true
 
 git config --global core.editor "code --wait"
 git config --global core.excludesfile "~/.gitignore"
