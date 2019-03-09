@@ -15,6 +15,22 @@ function install_brew() {
   fi
 }
 
+function install_brew_taps() {
+  REQUIRED="
+    heroku/brew
+    homebrew/cask
+    homebrew/cask-drivers
+    homebrew/core
+    homebrew/services
+  "
+
+  INSTALLED=$(brew tap)
+
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || brew tap $i
+  done
+}
+
 function install_brew_formulas() {
   REQUIRED="
     awscli
@@ -40,8 +56,8 @@ function install_brew_formulas() {
 
   INSTALLED=$(brew list)
 
-  for formula in $REQUIRED; do
-    grep -q $formula <<<$INSTALLED || brew install $formula
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || brew install $i
   done
 }
 
@@ -52,8 +68,8 @@ function install_brew_formulas_without_dependencies() {
 
   INSTALLED=$(brew list)
 
-  for formula in $REQUIRED; do
-    grep -q $formula <<<$INSTALLED || brew install $formula --ignore-dependencies
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || brew install $i --ignore-dependencies
   done
 }
 
@@ -73,8 +89,8 @@ function install_brew_casks() {
 
   INSTALLED=$(brew cask list)
 
-  for cask in $REQUIRED; do
-    grep -q $cask <<<$INSTALLED || brew cask install $cask
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || brew cask install $i
   done
 }
 
@@ -85,8 +101,8 @@ function install_heroku_plugins() {
 
   INSTALLED=$(heroku plugins)
 
-  for plugin in $REQUIRED; do
-    grep -q $plugin <<<$INSTALLED || heroku plugins:install $plugin
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || heroku plugins:install $i
   done
 }
 
@@ -118,6 +134,8 @@ install_brew
 brew update
 
 brew upgrade
+
+install_brew_taps
 
 install_brew_formulas
 
