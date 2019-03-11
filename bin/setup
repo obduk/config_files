@@ -3,54 +3,20 @@ set -e
 
 cd $(dirname $0)/..
 
-function install_nvm() {
-  if ! type nvm &>/dev/null; then
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-  fi
-}
-
 function install_brew() {
   if ! type brew &>/dev/null; then
     $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 }
 
-function install_brew_taps() {
-  REQUIRED="
-    heroku/brew
-    homebrew/cask
-    homebrew/cask-drivers
-    homebrew/core
-    homebrew/services
-  "
-
-  INSTALLED=$(brew tap)
-
-  for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || brew tap $i
-  done
-}
-
 function install_brew_formulas() {
   REQUIRED="
     awscli
     bash-completion
-    circleci
-    coreutils
     git
-    go
-    heroku
-    imagemagick
-    libmagic
     ncdu
     neovim
-    postgresql
-    python
-    python@2
-    rbenv
-    redis
     shfmt
-    terraform
     tree
   "
 
@@ -61,29 +27,14 @@ function install_brew_formulas() {
   done
 }
 
-function install_brew_formulas_without_dependencies() {
-  REQUIRED="
-    yarn
-  "
-
-  INSTALLED=$(brew list)
-
-  for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || brew install $i --ignore-dependencies
-  done
-}
-
 function install_brew_casks() {
   REQUIRED="
-    chromedriver
-    docker
     google-backup-and-sync
     google-chrome
     keepassx
     postman
     slack
     spotify
-    tunnelblick
     visual-studio-code
   "
 
@@ -91,18 +42,6 @@ function install_brew_casks() {
 
   for i in $REQUIRED; do
     grep -q $i <<<$INSTALLED || brew cask install $i
-  done
-}
-
-function install_heroku_plugins() {
-  REQUIRED="
-    autocomplete
-  "
-
-  INSTALLED=$(heroku plugins)
-
-  for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || heroku plugins:install $i
   done
 }
 
@@ -127,19 +66,13 @@ done
 
 set -v
 
-install_nvm
-
 install_brew
 
 brew update
 
 brew upgrade
 
-install_brew_taps
-
 install_brew_formulas
-
-install_brew_formulas_without_dependencies
 
 install_brew_casks
 
@@ -150,16 +83,5 @@ brew doctor || true
 git config --global core.editor "code --wait"
 git config --global core.excludesfile "~/.gitignore"
 git config --global fetch.prune true
-
-install_heroku_plugins
-
-pip2 install --upgrade \
-  pip \
-  setuptools
-
-pip3 install --upgrade \
-  pip \
-  setuptools \
-  virtualenv
 
 echo "setup complete"
