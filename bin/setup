@@ -3,48 +3,6 @@ set -e
 
 cd $(dirname $0)/..
 
-function install_brew() {
-  if ! type brew &>/dev/null; then
-    $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  fi
-}
-
-function install_brew_formulas() {
-  REQUIRED="
-    awscli
-    bash-completion
-    git
-    ncdu
-    neovim
-    shfmt
-    tree
-  "
-
-  INSTALLED=$(brew list)
-
-  for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || brew install $i
-  done
-}
-
-function install_brew_casks() {
-  REQUIRED="
-    google-backup-and-sync
-    google-chrome
-    keepassx
-    postman
-    slack
-    spotify
-    visual-studio-code
-  "
-
-  INSTALLED=$(brew cask list)
-
-  for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || brew cask install $i
-  done
-}
-
 function echoexec() {
   echo $@
   $@
@@ -64,17 +22,33 @@ for file in $(git ls-files); do
   fi
 done
 
-set -v
+if ! type brew &>/dev/null; then
+  $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
-install_brew
+set -v
 
 brew update
 
 brew upgrade
 
-install_brew_formulas
+brew install \
+  awscli \
+  bash-completion \
+  git \
+  ncdu \
+  neovim \
+  shfmt \
+  tree
 
-install_brew_casks
+brew cask install \
+  google-backup-and-sync \
+  google-chrome \
+  keepassx \
+  postman \
+  slack \
+  spotify \
+  visual-studio-code
 
 brew cleanup
 
