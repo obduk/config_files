@@ -8,8 +8,8 @@ alias la='ls -lhAF'
 alias ll='ls -lhF'
 
 # brew bash completion
-if type brew &>/dev/null; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -r "/usr/local/etc/profile.d/bash_completion.sh" ]; then
+  . "/usr/local/etc/profile.d/bash_completion.sh"
 fi
 
 # rbenv
@@ -19,14 +19,12 @@ fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh"
+fi
 
-# Heroku
-HEROKU_AC_BASH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/bash_setup"
-
-if [ -f "$HEROKU_AC_BASH_SETUP_PATH" ]; then
-  . $HEROKU_AC_BASH_SETUP_PATH
+if [ -s "$NVM_DIR/bash_completion" ]; then
+  . "$NVM_DIR/bash_completion"
 fi
 
 # bin
