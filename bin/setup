@@ -35,6 +35,7 @@ brew upgrade
 brew install \
   awscli \
   bash-completion \
+  coreutils \
   git \
   ncdu \
   neovim \
