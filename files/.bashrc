@@ -37,14 +37,24 @@ if [ -d "$HOME/bin" ]; then
   export PATH="$HOME/bin:$PATH"
 fi
 
-# Workspace info
-function wi() {
+function workspace_info() {
   for path in $(find $HOME/workspace -maxdepth 2 -type d -name .git | sort | sed "s|/\.git$||"); do
     cd $path
     echo $PWD
     git branch
     git status --short
     git stash list
+    echo
+  done
+}
+
+function setup_workspaces() {
+  for workspace in $HOME/workspace/*; do
+    printf %"$COLUMNS"s | tr " " "-"
+    echo $workspace
+    cd $workspace
+    git pull
+    ./bin/setup
     echo
   done
 }
