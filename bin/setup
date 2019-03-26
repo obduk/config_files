@@ -38,6 +38,7 @@ brew install \
   coreutils \
   git \
   ncdu \
+  htop \
   neovim \
   shfmt \
   tree
