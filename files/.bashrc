@@ -1,5 +1,10 @@
 PS1='\u@\h:\w\$ '
 
+HISTCONTROL=ignoreboth
+HISTFILESIZE=10000
+HISTSIZE=10000
+SHELL_SESSION_HISTORY=0
+
 export CLICOLOR=1
 
 # bash aliases
