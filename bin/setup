@@ -33,14 +33,12 @@ brew update
 brew upgrade
 
 brew install \
-  awscli \
   bash-completion \
   coreutils \
   git \
   ncdu \
   htop \
   neovim \
-  shfmt \
   tree
 
 brew cask install \
