@@ -8,6 +8,28 @@ function echoexec() {
   $@
 }
 
+function install_brew() {
+  if ! type brew &>/dev/null; then
+    $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+}
+
+function brew_install_missing_formulas() {
+  INSTALLED=$(brew list)
+
+  for formula in $@; do
+    grep -q $formula <<<$INSTALLED || brew install $formula
+  done
+}
+
+function brew_cask_install_missing_formulas() {
+  INSTALLED=$(brew cask list)
+
+  for formula in $@; do
+    grep -q $formula <<<$INSTALLED || brew cask install $formula
+  done
+}
+
 cd files
 
 for file in $(git ls-files); do
@@ -22,17 +44,15 @@ for file in $(git ls-files); do
   fi
 done
 
-if ! type brew &>/dev/null; then
-  $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 set -v
+
+install_brew
 
 brew update
 
 brew upgrade
 
-brew install \
+brew_install_missing_formulas \
   bash-completion \
   coreutils \
   git \
@@ -41,7 +61,7 @@ brew install \
   neovim \
   tree
 
-brew cask install \
+brew_cask_install_missing_formulas \
   google-backup-and-sync \
   google-chrome \
   keepassx \
