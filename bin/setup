@@ -15,17 +15,37 @@ function install_brew() {
 }
 
 function brew_install_missing_formulas() {
+  REQUIRED="
+    bash-completion
+    coreutils
+    git
+    ncdu
+    htop
+    neovim
+    tree
+  "
+
   INSTALLED=$(brew list)
 
-  for formula in $@; do
+  for formula in $REQUIRED; do
     grep -q $formula <<<$INSTALLED || brew install $formula
   done
 }
 
 function brew_cask_install_missing_formulas() {
+  REQUIRED="
+    google-backup-and-sync
+    google-chrome
+    keepassx
+    postman
+    slack
+    spotify
+    visual-studio-code
+  "
+
   INSTALLED=$(brew cask list)
 
-  for formula in $@; do
+  for formula in $REQUIRED; do
     grep -q $formula <<<$INSTALLED || brew cask install $formula
   done
 }
@@ -52,23 +72,9 @@ brew update
 
 brew upgrade
 
-brew_install_missing_formulas \
-  bash-completion \
-  coreutils \
-  git \
-  ncdu \
-  htop \
-  neovim \
-  tree
+brew_install_missing_formulas
 
-brew_cask_install_missing_formulas \
-  google-backup-and-sync \
-  google-chrome \
-  keepassx \
-  postman \
-  slack \
-  spotify \
-  visual-studio-code
+brew_cask_install_missing_formulas
 
 brew cleanup
 
