@@ -3,11 +3,6 @@ set -e
 
 cd $(dirname $0)/..
 
-function echoexec() {
-  echo $@
-  $@
-}
-
 function install_brew() {
   if ! type brew &>/dev/null; then
     $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -57,10 +52,10 @@ for file in $(git ls-files); do
 
   if [ ! -h $target ]; then
     if [ -f $target ]; then
-      echoexec mv $target $target.backup
+      mv -v $target $target.backup
     fi
 
-    echoexec ln -sfn $(pwd)/$file $target
+    ln -fhsv $(pwd)/$file $target
   fi
 done
 
