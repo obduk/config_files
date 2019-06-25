@@ -69,6 +69,8 @@ brew upgrade
 
 brew_install_missing_formulas
 
+brew cask upgrade
+
 brew_cask_install_missing_formulas
 
 brew cleanup
