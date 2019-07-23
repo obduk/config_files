@@ -38,9 +38,9 @@ if [ -d "$HOME/bin" ]; then
 fi
 
 function workspace_info() {
-  for path in $(find $HOME/workspace -maxdepth 2 -type d -name .git | sort | sed "s|/\.git$||"); do
-    cd $path
-    echo $PWD
+  for workspace in $HOME/workspace/*; do
+    echo $workspace
+    cd $workspace
     git branch
     git status --short
     git stash list
