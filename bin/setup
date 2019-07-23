@@ -50,10 +50,6 @@ for file in $(git ls-files); do
   target=$HOME/$file
 
   if [ ! -h $target ]; then
-    if [ -f $target ]; then
-      mv -v $target $target.backup
-    fi
-
     ln -fhsv $(pwd)/$file $target
   fi
 done
