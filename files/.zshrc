@@ -1,21 +1,12 @@
-PS1='\u@\h:\w\$ '
-
-HISTCONTROL=ignoreboth
-HISTFILESIZE=10000
-HISTSIZE=10000
-SHELL_SESSION_HISTORY=0
-
 export CLICOLOR=1
 
-# bash aliases
+# aliases
 alias grep='grep --color=auto'
 alias la='ls -lhAF'
 alias ll='ls -lhF'
 
-# brew bash completion
-if [ -r "/usr/local/etc/profile.d/bash_completion.sh" ]; then
-  . "/usr/local/etc/profile.d/bash_completion.sh"
-fi
+# completion
+autoload -Uz compinit && compinit
 
 # rbenv
 if type rbenv &>/dev/null; then
@@ -24,13 +15,8 @@ fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  . "$NVM_DIR/nvm.sh"
-fi
-
-if [ -s "$NVM_DIR/bash_completion" ]; then
-  . "$NVM_DIR/bash_completion"
-fi
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
 
 # bin
 if [ -d "$HOME/bin" ]; then

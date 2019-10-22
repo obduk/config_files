@@ -11,8 +11,6 @@ function install_brew() {
 
 function brew_install_missing_formulas() {
   REQUIRED="
-    bash-completion
-    git
     ncdu
     htop
     neovim
@@ -75,5 +73,11 @@ brew doctor || true
 git config --global core.editor "code --wait"
 git config --global core.excludesfile "~/.gitignore"
 git config --global fetch.prune true
+
+if [ ! -f $HOME/.ssh/id_rsa ]; then
+  ssh-keygen
+
+  cat $HOME/.ssh/id_rsa.pub
+fi
 
 echo "setup complete"
