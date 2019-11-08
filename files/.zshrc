@@ -18,7 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
 
-function workspace_info() {
+function wi() {
   for workspace in $HOME/workspace/*; do
     echo $workspace
     cd $workspace
