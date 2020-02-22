@@ -1,6 +1,6 @@
 # Config Files
 
-Various personal configuration files.
+Personal laptop configuration files.
 
 ## Usage
 
