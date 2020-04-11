@@ -12,9 +12,7 @@ function install_brew() {
 function brew_install_missing_formulas() {
   REQUIRED="
     ncdu
-    htop
     neovim
-    tree
   "
 
   INSTALLED=$(brew list)
@@ -29,8 +27,6 @@ function brew_cask_install_missing_formulas() {
     google-backup-and-sync
     google-chrome
     keepassx
-    postman
-    slack
     spotify
     visual-studio-code
   "
