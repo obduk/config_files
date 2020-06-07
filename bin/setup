@@ -70,6 +70,8 @@ brew doctor || true
 git config --global core.editor "code --wait"
 git config --global core.excludesfile "~/.gitignore"
 git config --global fetch.prune true
+git config --global user.name "Owen Ben Davies"
+git config --global user.email "734943+owenbendavies@users.noreply.github.com"
 
 if [ ! -f $HOME/.ssh/id_rsa ]; then
   ssh-keygen
