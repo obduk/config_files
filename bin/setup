@@ -30,6 +30,7 @@ function brew_cask_install_missing_formulas() {
     keepassx
     spotify
     visual-studio-code
+    zoomus
   "
 
   INSTALLED=$(brew cask list)
