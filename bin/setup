@@ -25,6 +25,7 @@ function brew_install_missing_formulas() {
 
 function brew_cask_install_missing_formulas() {
   REQUIRED="
+    docker
     google-backup-and-sync
     google-chrome
     google-drive-file-stream
