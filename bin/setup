@@ -11,9 +11,15 @@ function install_brew() {
 
 function brew_install_missing_formulas() {
   REQUIRED="
+    awscli
+    heroku
     ncdu
     neovim
     qpdf
+    nvm
+    rbenv
+    shfmt
+    terraform
   "
 
   INSTALLED=$(brew list)
