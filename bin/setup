@@ -66,6 +66,8 @@ brew update
 
 brew upgrade
 
+brew tap heroku/brew
+
 brew_install_missing_formulas
 
 brew cask upgrade
