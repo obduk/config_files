@@ -22,6 +22,7 @@ export NVM_DIR="$HOME/.nvm"
 
 function wi() {
   for workspace in $HOME/workspace/*; do
+    printf %"$COLUMNS"s | tr " " "-"
     echo $workspace
     cd $workspace
     git branch
