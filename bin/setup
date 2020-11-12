@@ -16,7 +16,6 @@ function brew_install_missing_formulas() {
     heroku
     ncdu
     neovim
-    qpdf
     nvm
     rbenv
     shfmt
