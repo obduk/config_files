@@ -22,23 +22,25 @@ export NVM_DIR="$HOME/.nvm"
 
 function wi() {
   for workspace in $HOME/workspace/*; do
-    printf %"$COLUMNS"s | tr " " "-"
+    echo "------------------------------------------------------------"
     echo $workspace
     cd $workspace
-    git branch
+    git branch --color | grep -v "master"
     git status --short
     git stash list
-    echo
   done
+
+  echo "------------------------------------------------------------"
 }
 
 function setup_workspaces() {
   for workspace in $HOME/workspace/*; do
-    printf %"$COLUMNS"s | tr " " "-"
+    echo "------------------------------------------------------------"
     echo $workspace
     cd $workspace
     git pull
     ./bin/setup
-    echo
   done
+
+  echo "------------------------------------------------------------"
 }
