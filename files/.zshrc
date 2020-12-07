@@ -25,7 +25,7 @@ function wi() {
     echo "------------------------------------------------------------"
     echo $workspace
     cd $workspace
-    git branch --color | grep -v "master"
+    git branch --color | grep -v "master" | grep -v "main" | grep -v "dev"
     git status --short
     git stash list
   done
@@ -35,12 +35,11 @@ function wi() {
 
 function setup_workspaces() {
   for workspace in $HOME/workspace/*; do
-    echo "------------------------------------------------------------"
+    printf %"$COLUMNS"s | tr " " "-"
     echo $workspace
     cd $workspace
     git pull
     ./bin/setup
   done
-
-  echo "------------------------------------------------------------"
+  printf %"$COLUMNS"s | tr " " "-"
 }
