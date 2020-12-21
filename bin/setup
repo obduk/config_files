@@ -34,7 +34,7 @@ function brew_cask_install_missing_formulas() {
     docker
     google-backup-and-sync
     google-chrome
-    keepassx
+    macpass
     postman
     spotify
     visual-studio-code
