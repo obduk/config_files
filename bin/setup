@@ -36,6 +36,7 @@ function brew_cask_install_missing_formulas() {
     google-chrome
     macpass
     postman
+    signal
     spotify
     visual-studio-code
     zoomus
@@ -44,7 +45,7 @@ function brew_cask_install_missing_formulas() {
   INSTALLED=$(brew list --cask)
 
   for formula in $REQUIRED; do
-    grep -q $formula <<<$INSTALLED || brew cask install $formula
+    grep -q $formula <<<$INSTALLED || brew install $formula
   done
 }
 
