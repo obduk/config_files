@@ -11,9 +11,7 @@ function install_brew() {
 
 function brew_install_missing_formulas() {
   REQUIRED="
-    aws-cdk
     awscli
-    heroku
     ncdu
     neovim
     nvm
@@ -24,8 +22,8 @@ function brew_install_missing_formulas() {
 
   INSTALLED=$(brew list --formula)
 
-  for formula in $REQUIRED; do
-    grep -q $formula <<<$INSTALLED || brew install $formula
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || brew install $i
   done
 }
 
@@ -44,8 +42,21 @@ function brew_cask_install_missing_formulas() {
 
   INSTALLED=$(brew list --cask)
 
-  for formula in $REQUIRED; do
-    grep -q $formula <<<$INSTALLED || brew install $formula
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || brew install $i
+  done
+}
+
+function install_missing_npms() {
+  REQUIRED="
+    aws-cdk
+    @aws-amplify/cli
+  "
+
+  INSTALLED=$(npm ls --global --depth=0)
+
+  for i in $REQUIRED; do
+    grep -q $i <<<$INSTALLED || npm install --global $i
   done
 }
 
@@ -67,17 +78,19 @@ brew update
 
 brew upgrade
 
-brew tap heroku/brew
+brew tap hashicorp/tap && brew install hashicorp/tap/terraform
+
+brew tap heroku/brew && brew install heroku
 
 brew_install_missing_formulas
-
-brew upgrade --cask
 
 brew_cask_install_missing_formulas
 
 brew cleanup
 
 brew doctor || true
+
+install_missing_npms
 
 git config --global core.editor "code --wait"
 git config --global core.excludesfile "~/.gitignore"
