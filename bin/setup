@@ -15,9 +15,7 @@ function brew_install_missing_formulas() {
     ncdu
     neovim
     nvm
-    rbenv
     shfmt
-    terraform
   "
 
   INSTALLED=$(brew list --formula)
@@ -77,10 +75,6 @@ install_brew
 brew update
 
 brew upgrade
-
-brew tap hashicorp/tap && brew install hashicorp/tap/terraform
-
-brew tap heroku/brew && brew install heroku
 
 brew_install_missing_formulas
 
