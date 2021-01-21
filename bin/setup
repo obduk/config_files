@@ -33,8 +33,10 @@ function brew_cask_install_missing_formulas() {
     macpass
     postman
     signal
+    slack
     spotify
     visual-studio-code
+    whatsapp
     zoomus
   "
 
