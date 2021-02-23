@@ -37,7 +37,7 @@ function brew_cask_install_missing_formulas() {
     spotify
     visual-studio-code
     whatsapp
-    zoomus
+    zoom
   "
 
   INSTALLED=$(brew list --cask)
