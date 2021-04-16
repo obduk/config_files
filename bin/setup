@@ -27,16 +27,13 @@ function brew_install_missing_formulas() {
 
 function brew_cask_install_missing_formulas() {
   REQUIRED="
-    docker
     google-backup-and-sync
     google-chrome
     macpass
     postman
     signal
-    slack
     spotify
     visual-studio-code
-    whatsapp
     zoom
   "
 
@@ -49,8 +46,9 @@ function brew_cask_install_missing_formulas() {
 
 function install_missing_npms() {
   REQUIRED="
-    aws-cdk
     @aws-amplify/cli
+    aws-cdk
+    npm
   "
 
   INSTALLED=$(npm ls --global --depth=0)
@@ -86,6 +84,9 @@ brew cleanup
 
 brew doctor || true
 
+export NVM_DIR="$HOME/.nvm"
+. /usr/local/opt/nvm/nvm.sh
+nvm install --lts
 install_missing_npms
 
 git config --global core.editor "code --wait"
