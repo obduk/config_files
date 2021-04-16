@@ -13,7 +13,7 @@ if type rbenv &>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+# export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -33,13 +33,3 @@ function wi() {
   echo "------------------------------------------------------------"
 }
 
-function setup_workspaces() {
-  for workspace in $HOME/workspace/*; do
-    printf %"$COLUMNS"s | tr " " "-"
-    echo $workspace
-    cd $workspace
-    git pull
-    ./bin/setup
-  done
-  printf %"$COLUMNS"s | tr " " "-"
-}
