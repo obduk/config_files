@@ -1,0 +1,8 @@
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore
+[fetch]
+	prune = true
+[user]
+	name = Owen Ben Davies
+	email = 734943+owenbendavies@users.noreply.github.com
