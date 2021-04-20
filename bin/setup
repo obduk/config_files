@@ -28,7 +28,6 @@ function brew_install_missing_formulas() {
 function brew_cask_install_missing_formulas() {
   REQUIRED="
     google-backup-and-sync
-    google-chrome
     macpass
     postman
     signal
