@@ -23,7 +23,7 @@ function wi() {
     echo "------------------------------------------------------------"
     echo $workspace
     cd $workspace
-    git branch --color | grep -v "master" | grep -v "main" | grep -v "dev"
+    git branch --all --color | grep -v "master\|main"
     git status --short
     git stash list
   done
