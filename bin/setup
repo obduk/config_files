@@ -14,7 +14,8 @@ function brew_install_missing_formulas() {
     awscli
     ncdu
     neovim
-    nvm
+    n
+    node
     shfmt
   "
 
@@ -53,7 +54,7 @@ function install_missing_npms() {
   INSTALLED=$(npm ls --global --depth=0)
 
   for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || npm install --global $i
+    grep -q $i <<<$INSTALLED || npm install --global $i@latest
   done
 }
 
@@ -83,12 +84,9 @@ brew cleanup
 
 brew doctor || true
 
-export NVM_DIR="$HOME/.nvm"
-set +v
-. /usr/local/opt/nvm/nvm.sh
-nvm install --lts
-set -v
 install_missing_npms
+
+npm update --global
 
 if [ ! -f $HOME/.ssh/id_rsa ]; then
   ssh-keygen

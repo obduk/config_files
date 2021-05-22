@@ -1,3 +1,4 @@
+# color terminal commands
 export CLICOLOR=1
 
 # aliases
@@ -13,10 +14,8 @@ if type rbenv &>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
+# keep npm version
+export N_PRESERVE_NPM=1
 
 function wi() {
   for workspace in $HOME/workspace/*; do
