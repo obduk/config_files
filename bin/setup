@@ -49,15 +49,16 @@ function brew_cask_install_missing_formulas() {
 
 function install_missing_npms() {
   REQUIRED="
+    npm
     @aws-amplify/cli
     aws-cdk
-    npm
+    yarn
   "
 
   INSTALLED=$(npm ls --global --depth=0)
 
   for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || npm install --global $i@latest
+    grep -q $i <<<$INSTALLED || npm install --global $i
   done
 }
 
