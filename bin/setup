@@ -16,6 +16,7 @@ function brew_install_missing_formulas() {
     neovim
     n
     shfmt
+    yarn
   "
 
   INSTALLED=$(brew list --formula)
@@ -31,7 +32,6 @@ function brew_cask_install_missing_formulas() {
     google-chrome
     macpass
     postman
-    signal
     spotify
     virtualbox
     virtualbox-extension-pack
@@ -43,19 +43,6 @@ function brew_cask_install_missing_formulas() {
 
   for i in $REQUIRED; do
     grep -q $i <<<$INSTALLED || brew install $i
-  done
-}
-
-function install_missing_npms() {
-  REQUIRED="
-    npm
-    yarn
-  "
-
-  INSTALLED=$(npm ls --global --depth=0)
-
-  for i in $REQUIRED; do
-    grep -q $i <<<$INSTALLED || npm install --global $i
   done
 }
 
@@ -84,10 +71,6 @@ brew_cask_install_missing_formulas
 brew cleanup
 
 brew doctor || true
-
-install_missing_npms
-
-npm update --global
 
 if [ ! -f $HOME/.ssh/id_rsa ]; then
   ssh-keygen

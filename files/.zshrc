@@ -14,9 +14,6 @@ if type rbenv &>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
-# keep npm version
-export N_PRESERVE_NPM=1
-
 function wi() {
   for workspace in $HOME/workspace/*; do
     echo "------------------------------------------------------------"
