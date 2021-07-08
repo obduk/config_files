@@ -50,8 +50,6 @@ function brew_cask_install_missing_formulas() {
 function install_missing_npms() {
   REQUIRED="
     npm
-    @aws-amplify/cli
-    aws-cdk
     yarn
   "
 
