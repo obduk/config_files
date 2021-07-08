@@ -15,7 +15,6 @@ function brew_install_missing_formulas() {
     ncdu
     neovim
     n
-    node
     shfmt
   "
 
