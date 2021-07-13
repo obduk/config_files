@@ -14,6 +14,9 @@ if type rbenv &>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
+# node 14
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+
 function wi() {
   for workspace in $HOME/workspace/*; do
     echo "------------------------------------------------------------"
